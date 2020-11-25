@@ -19,7 +19,7 @@ void example()
     int flag;
     unsigned char ch;
 
-    tempDrink.setAllinfo("可乐", 3, 8);
+    tempDrink.setAllinfo("可乐", 2.5, 8);
     v.sendDrink(tempDrink, 0);
 
     tempDrink.setAllinfo("农夫山泉", 1.5, 10);
@@ -28,13 +28,18 @@ void example()
     tempDrink.setAllinfo("雪碧", 1.5, 10);
     v.sendDrink(tempDrink, 2);
 
-    tempDrink.setAllinfo("酸奶", 5.0, 5);
+    tempDrink.setAllinfo("酸奶", 3.0, 3);
     v.sendDrink(tempDrink, 3);
+
+    tempDrink.setAllinfo("酷儿", 4.0, 2);
+    v.sendDrink(tempDrink, 4);
+
+    tempDrink.setAllinfo("咖啡", 5.0, 1);
+    v.sendDrink(tempDrink, 5);
 
     while (1)
     {
         CLEAR();
-
         v.gotoXY(0, 0);
         cout << "顾客请按1，送货员请按2，退出请按-1：";
         cin >> flag;
